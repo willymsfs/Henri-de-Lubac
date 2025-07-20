@@ -1,0 +1,151 @@
+/* --- Global Styles & Fonts --- */
+body {
+    font-family: 'Lora', serif;
+    line-height: 1.8;
+    color: #333;
+    background-color: #fdfdfd;
+    margin: 0;
+    font-size: 18px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    color: #4a3f35;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+
+p, ul, li, table {
+    margin-bottom: 1.2rem;
+}
+
+a {
+    color: #8a5a2e;
+    text-decoration: none;
+    border-bottom: 1px dotted #8a5a2e;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #5c3d1e;
+    border-bottom-style: solid;
+}
+
+strong, b {
+    font-weight: 700;
+    color: #5c3d1e;
+}
+
+em, i {
+    font-style: italic;
+}
+
+/* --- Header & Background --- */
+header {
+    background-image: linear-gradient(rgba(42, 35, 29, 0.8), rgba(42, 35, 29, 0.6)), url('https://www.transparenttextures.com/patterns/old-wall.png' ), url('https://images.unsplash.com/photo-1505664115139-da43c2a5005b?auto=format&fit=crop&w=1500&q=80' );
+    background-blend-mode: multiply, overlay, normal;
+    background-size: auto, auto, cover;
+    background-position: center;
+    color: #fdfdfd;
+    text-align: center;
+    padding: 6rem 2rem;
+    border-bottom: 5px solid #c2b280;
+}
+
+header h1 {
+    font-size: 4rem;
+    margin: 0;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    letter-spacing: 2px;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: #e0e0e0;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+/* --- Main Content & Layout --- */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 3rem;
+    border-left: 3px solid #e0dcd1;
+    padding-left: 2rem;
+}
+
+.idea {
+    background-color: #f9f6f2;
+    border: 1px solid #e0dcd1;
+    border-radius: 5px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+/* --- Table Styling --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0dcd1;
+}
+
+thead {
+    background-color: #4a3f35;
+    color: #fff;
+    font-family: 'Cinzel', serif;
+}
+
+th {
+    font-weight: 700;
+}
+
+tbody tr {
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #f9f6f2;
+}
+
+tbody tr:hover {
+    background-color: #c2b280;
+    color: #fff;
+}
+
+tbody tr:hover strong {
+    color: #fff;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    background-color: #333;
+    color: #ccc;
+    font-size: 0.9rem;
+    font-style: italic;
+}

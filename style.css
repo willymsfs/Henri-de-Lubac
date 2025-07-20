@@ -1,151 +1,179 @@
 /* --- Global Styles & Fonts --- */
-body {
-    font-family: 'Lora', serif;
-    line-height: 1.8;
-    color: #333;
-    background-color: #fdfdfd;
-    margin: 0;
-    font-size: 18px;
+:root {
+    --font-primary: 'Cormorant Garamond', serif;
+    --font-headings: 'Cinzel Decorative', cursive;
+    --color-text: #2c2825;
+    --color-background: #f4f1eb;
+    --color-primary: #5a4a3a;
+    --color-secondary: #c2b280;
+    --color-accent: #8a5a2e;
+    --border-light: 1px solid #dcd6c8;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Cinzel', serif;
+body {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    line-height: 1.9;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    margin: 0;
+    font-size: 19px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headings);
     font-weight: 700;
-    color: #4a3f35;
+    color: var(--color-primary);
     margin-top: 1.5em;
     margin-bottom: 0.5em;
-    line-height: 1.2;
-}
-
-p, ul, li, table {
-    margin-bottom: 1.2rem;
+    line-height: 1.3;
 }
 
 a {
-    color: #8a5a2e;
+    color: var(--color-accent);
     text-decoration: none;
-    border-bottom: 1px dotted #8a5a2e;
-    transition: color 0.3s ease;
+    border-bottom: 1px dotted var(--color-accent);
+    transition: all 0.3s ease;
 }
 
 a:hover {
-    color: #5c3d1e;
+    color: var(--color-primary);
     border-bottom-style: solid;
+    background-color: rgba(194, 178, 128, 0.1);
 }
 
-strong, b {
-    font-weight: 700;
-    color: #5c3d1e;
-}
-
-em, i {
-    font-style: italic;
-}
-
-/* --- Header & Background --- */
+/* --- Header --- */
 header {
-    background-image: linear-gradient(rgba(42, 35, 29, 0.8), rgba(42, 35, 29, 0.6)), url('https://www.transparenttextures.com/patterns/old-wall.png' ), url('https://images.unsplash.com/photo-1505664115139-da43c2a5005b?auto=format&fit=crop&w=1500&q=80' );
+    background-image: linear-gradient(rgba(42, 35, 29, 0.85), rgba(42, 35, 29, 0.7)), url('https://www.transparenttextures.com/patterns/worn-dots.png' ), url('https://images.unsplash.com/photo-1519734013832-4052734112a1?auto=format&fit=crop&w=1800&q=80' );
     background-blend-mode: multiply, overlay, normal;
     background-size: auto, auto, cover;
     background-position: center;
-    color: #fdfdfd;
+    background-attachment: fixed;
+    color: #fff;
     text-align: center;
-    padding: 6rem 2rem;
-    border-bottom: 5px solid #c2b280;
+    padding: 7rem 2rem;
+    border-bottom: 8px solid var(--color-secondary);
 }
 
-header h1 {
-    font-size: 4rem;
+.main-title {
+    font-size: 5rem;
     margin: 0;
     color: #fff;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-    letter-spacing: 2px;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+    letter-spacing: 3px;
 }
 
-header h2 {
+.subtitle {
     font-size: 1.5rem;
-    font-family: 'Lora', serif;
+    font-family: var(--font-primary);
     font-style: italic;
     font-weight: 400;
     color: #e0e0e0;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    max-width: 800px;
+    margin: 1rem auto 0;
 }
 
-/* --- Main Content & Layout --- */
+/* --- Table of Contents (TOC) --- */
+.toc {
+    background-color: #fff;
+    border: var(--border-light);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    max-width: 700px;
+    margin: -4rem auto 3rem auto;
+    padding: 1.5rem 2.5rem;
+    position: relative;
+    z-index: 10;
+    border-radius: 8px;
+}
+.toc h3 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    columns: 2;
+}
+.toc ul ul {
+    columns: 1;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+.toc li {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Main Content --- */
 .container {
-    max-width: 800px;
+    max-width: 850px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 0 2rem;
 }
 
 section {
     margin-bottom: 3rem;
-    border-left: 3px solid #e0dcd1;
-    padding-left: 2rem;
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--color-secondary), rgba(0, 0, 0, 0));
+    margin: 4rem 0;
 }
 
 .idea {
-    background-color: #f9f6f2;
-    border: 1px solid #e0dcd1;
-    border-radius: 5px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-ul {
-    list-style-type: square;
-    padding-left: 20px;
-}
-
-/* --- Table Styling --- */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-th, td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid #e0dcd1;
-}
-
-thead {
-    background-color: #4a3f35;
-    color: #fff;
-    font-family: 'Cinzel', serif;
-}
-
-th {
-    font-weight: 700;
-}
-
-tbody tr {
     background-color: #fff;
-    transition: background-color 0.3s ease;
+    border: var(--border-light);
+    border-left: 5px solid var(--color-secondary);
+    border-radius: 0 5px 5px 0;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
-tbody tr:nth-of-type(even) {
-    background-color: #f9f6f2;
+.context-box {
+    background-color: #e8e4da;
+    border: var(--border-light);
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin: 1.5rem 0;
+}
+.context-box h4 { margin-top: 0; }
+
+blockquote.quote {
+    border-left: 3px solid var(--color-accent);
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #555;
+}
+blockquote.quote footer {
+    font-style: normal;
+    font-size: 1rem;
+    text-align: right;
+    color: #777;
 }
 
-tbody tr:hover {
-    background-color: #c2b280;
-    color: #fff;
-}
-
-tbody tr:hover strong {
-    color: #fff;
+/* --- Mermaid Flowchart --- */
+.mermaid {
+    text-align: center;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
 /* --- Footer --- */
 footer {
     text-align: center;
-    padding: 2rem;
-    margin-top: 2rem;
-    background-color: #333;
+    padding: 2.5rem;
+    margin-top: 4rem;
+    background-color: var(--color-primary);
     color: #ccc;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-style: italic;
 }
